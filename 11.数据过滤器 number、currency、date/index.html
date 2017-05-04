@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数据过滤器</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+<!-- 
+
+》》MVC框架：模型(model)－视图(view)－控制器(controller)
+
+	1>.Model（模型）表示应用程序核心（比如数据库记录列表）。
+	2>.View（视图）显示数据（数据库记录）====================HTML。
+	3>.Controller（控制器）处理输入（写入数据库记录）=========JS。
+
+》》知识点：
+	1.数据过滤
+
+
+
+ -->
+
+</head>
+<body ng-app="myApp">  <!-- 规定angular所管理的区域，写在body上标明要管理整个页面 -->
+
+		<div class="row1"  ng-controller="oneController">
+			<input type="text" ng-model="name">
+			<input type="text" ng-model="age">
+			<input type="text" ng-model="Data.message">
+
+			<div>姓名1：{{name}}</div>
+			<div>年龄1：{{age}}</div>
+			{{Data.message}}
+			<hr>
+
+			<b>数据过滤: </b>
+			<br>
+			<!-- number：数据格式过滤，可以使数据每三位用逗号分开显示  123,456,789,235,567,790 -->
+			{{123456789235567788 | number}}
+			<br>保留三位小数点
+			{{178.456789235567788 | number:3}}
+			<br>
+			人民币：{{989934.3443 |currency:'￥'}}  <br>
+			美元：{{989934.3443 |currency}}
+
+
+			<br>
+			格式化字符串为小写：
+				{{"sdjfhsjkdfjkDKJFV"}}
+            <hr>
+
+			<b>时间格式：</b><br>
+			{{today}} <br>
+			{{today |date:"y-M-d"}} <br>
+			{{today |date:"short"}} <br>
+			{{today |date:"fullDate"}} <br>
+			{{today |date:"shortDate"}} <br>
+			{{today |date:"shortTime"}} <br>
+			{{today |date:"longDate"}} <br>
+			{{today |date:"mediumDate"}} <br>
+			{{today |date:"mediumTime"}} <hr>
+            <b>日期格式：</b><br>
+			年：
+			{{today |date:"y"}} <br>
+			{{today |date:"yy"}} <br>
+			{{today |date:"yyyy"}} <br>
+			月：
+			{{today |date:"M"}} <br>
+			{{today |date:"MM"}} <br>
+			{{today |date:"MMM"}} <br>
+			{{today |date:"MMMM"}} <br>
+			日：
+			{{today |date:"d"}} <br>
+			{{today |date:"dd"}} <br>
+			{{today |date:"EEEE"}} <br>
+			{{today |date:"EEE"}} <br>
+
+			小时：
+			24进制{{today |date:"HH"}} <br>
+			{{today |date:"H"}} <br>
+			12进制{{today |date:"hh"}} <br>
+			{{today |date:"h"}} <br>
+			分：
+			{{today |date:"mm"}} <br>
+			{{today |date:"m"}} <br>
+			
+			秒：
+			{{today |date:"ss"}} <br>
+			{{today |date:"s"}} <br>
+			{{today |date:".sss"}} <br>
+
+			{{today |date:"y-MM-d H:m:s"}} <br>
+			
+
+			数组截取：
+			{{[12,3,0,4,5,6,6,2] |limitTo:3}} <br>
+			{{[12,3,0,4,5,6,6,2] |limitTo:-3}} <br>
+			
+			转成小写：
+			{{"ljkkjkHH" |lowercase}}
+			{{"ljkkjkHH" |uppercase}}
+
+
+
+			
+
+
+
+
+
+
+
+
+			<br>
+
+			<br>
+
+			<br>
+
+			<br>
+
+			<br>
+
+
+
+		</div>
+
+		<hr>
+
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

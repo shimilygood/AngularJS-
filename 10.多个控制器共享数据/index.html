@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>多个控制器共享数据</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+<!-- 
+
+》》MVC框架：模型(model)－视图(view)－控制器(controller)
+
+	1>.Model（模型）表示应用程序核心（比如数据库记录列表）。
+	2>.View（视图）显示数据（数据库记录）====================HTML。
+	3>.Controller（控制器）处理输入（写入数据库记录）=========JS。
+
+》》知识点：
+	1.$provider方法
+
+
+
+【重点】：angularJS中不能有多高ng-app，也不能嵌套
+ -->
+
+</head>
+<body ng-app="myApp">  <!-- 规定angular所管理的区域，写在body上标明要管理整个页面 -->
+
+		<div class="row1"  ng-controller="oneController">
+			<input type="text" ng-model="name">
+			<input type="text" ng-model="age">
+			<input type="text" ng-model="Data.message">
+
+			<div>姓名1：{{name}}</div>
+			<div>年龄1：{{age}}</div>
+			<br>				
+		</div>
+
+		<hr>
+		<!-- <div class="row2" ng-controller="twoController">
+			<div>姓名2：{{name}}</div>
+			<div>年龄2：{{age}}</div>
+		</div> -->
+	<hr>
+		<div class="row3" ng-controller="threeController">
+
+			<div>姓名3：{{data.name}}</div>
+			<div>年龄3：{{data.age}}</div>
+
+			<input type="text" ng-model="Data.message">
+		</div>
+
+
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

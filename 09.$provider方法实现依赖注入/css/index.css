@@ -1,0 +1,8 @@
+*{margin: 0; padding: 0;}
+
+body{ font-size: 14px; line-height: 30px;}
+
+.boxOut{ width: 70%; height: 500px; border: #ccc 1px solid; margin: 10px auto; padding: 10px;}
+
+.boxIn{ width: 40%; height: 200px; border: #aaa 1px solid; padding: 10px; margin: 10px;}
+

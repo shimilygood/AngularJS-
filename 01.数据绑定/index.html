@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数据绑定</title>
+<!-- 
+
+》》MVC框架：模型(model)－视图(view)－控制器(controller)
+
+	1>.Model（模型）表示应用程序核心（比如数据库记录列表）。
+	2>.View（视图）显示数据（数据库记录）====================HTML。
+	3>.Controller（控制器）处理输入（写入数据库记录）=========JS。
+
+》》知识点：
+	1.angularJS的引用方法：引用angular库
+	2.数据绑定方法【双向绑定】：ng-app表示angular所要管理的区域
+	3.数据输出方式：1.{{"字符串"}}   {{'字符串'}}  {{表达式或者变脸}}
+
+
+
+
+ -->
+</head>
+<body ng-app>  <!-- 规定angular所管理的区域，写在body上标明要管理整个页面 -->
+	
+<input type="text" ng-model="name">  <!-- 表单可以看作是M层 -->
+
+<h1 ng-bind="name"></h1>
+
+{{'学生一：Tom'}}  <!-- 输出字符串 --><hr>
+
+{{"学生二：shimily"}}<hr>
+
+<div>
+
+{{'学生三：'+name}}   <!-- 输出变量 -->
+
+{{123+45}}  <!-- 简单运算 -->
+<hr>
+<input type="text" ng-model="name">
+
+<hr>
+
+<input type="text" ng-model="fs1">
+<input type="text" ng-model="fs2">
+{{fs1+fs2}}
+
+
+
+</div>
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+
+</body>
+</html>

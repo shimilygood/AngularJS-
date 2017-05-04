@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数据绑定</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+<!-- 
+
+》》MVC框架：模型(model)－视图(view)－控制器(controller)
+
+	1>.Model（模型）表示应用程序核心（比如数据库记录列表）。
+	2>.View（视图）显示数据（数据库记录）====================HTML。
+	3>.Controller（控制器）处理输入（写入数据库记录）=========JS。
+
+》》知识点：
+	1.多个控制器之间的作用域跟js的function的作用域类似。
+	2.每个ng-controller绑定一个作用域，内部可以访问外部的，但是外部不能访问内部的表达式。
+
+
+
+ -->
+
+</head>
+<body ng-app>  <!-- 规定angular所管理的区域，写在body上标明要管理整个页面 -->
+	
+<div class="boxOut" ng-controller="firstController">
+	<input type="text" ng-model="name"><br>
+	<input type="text" ng-model="age">
+	<p>姓名：{{name}}</p><br>
+	<p>年龄：{{age}}</p>
+
+	<h3 ng-bind="name"></h3>
+		<div class="boxIn" ng-controller="twoController">
+			<input type="text" ng-model="name"><br>
+			<input type="text" ng-model="age"><br>
+			<p>姓名：{{name}}</p><br>
+			<p>姓名：{{age}}</p><br>
+			
+		</div>
+		
+</div>
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

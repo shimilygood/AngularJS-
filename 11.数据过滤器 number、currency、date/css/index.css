@@ -1,0 +1,38 @@
+*{margin: 0; padding: 0;}
+
+body{ font-size: 16px; line-height: 30px; color:#000;}
+
+.boxOut{ width: 70%; height: 500px; border: #ccc 1px solid; margin: 10px auto; padding: 10px;}
+
+.boxIn{ width: 40%; height: 200px; border: #aaa 1px solid; padding: 10px; margin: 10px;}
+
+hr{ color: red; margin: 10px auto;}
+
+input{ display: inline-block; background: none; border: #aaa 1px solid;  line-height: 30px; margin: 5px; padding: 0 5px;}
+
+.row{ width: 1000px; margin: 20px auto; }
+.row1,.row2,.row3{ width: 1000px; margin: 20px auto; border: #ddd 1px solid; padding: 10px;}
+h1{ font-size: 28px; font-weight: bold; color: red; line-height: 60px; border-bottom: 1px #ccc dotted; margin: 5px auto; text-align: center;}
+h2{ font-size: 24px; font-weight: bold; color: green; line-height: 40px;}
+h3{ font-size: 18px; font-weight: bold; color: deeppink; line-height: 40px;}
+h4{ font-size: 17px; font-weight: bold; color: gray; line-height: 40px;}
+h5{ font-size: 16px; font-weight: bold; color: blue; line-height: 40px;}
+h6{ font-size: 16px; font-weight: bold; color: orange; line-height: 40px;}
+.caretCur{ color: red;}
+.red{color: red;}
+.green{color: green;}
+p{font-size: 16px; line-height: 24px; color: #8a8a8a;}
+
+span{font-size: 16px; font-weight: bold; line-height: 24px; color: #ff0000;}
+
+li{ list-style: none; line-height: 30px; padding: 0 10px;}
+
+strong{color: green;}
+
+.active{color:darkgray;}
+
+.cur,.on{ color: red; font-weight: bold;}
+
+.even{ background: #ccc;}
+.odd{ background:#28A4C9; color: #fff;}
+

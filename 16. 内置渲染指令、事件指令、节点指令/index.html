@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css"/>
+	</head>
+	<body ng-app="myApp">
+	    <div class="row1">
+	    	
+<!--内置指令：渲染指令、事件指令、节点指令-->
+<!--渲染指令:ng-init   ng-bind  ng-repeat   ng-include   ng-bind-template-->
+
+	    	
+	    	<!--ng-bind:模板渲染 -->
+	    	<input type="" name="" id="" value=""  ng-model="name" />
+			<p>{{name}}</p>
+			<h2>{{1+1}}</h2>
+			<h2 ng-bind="22+5"></h2>
+			<h2 ng-bind-template="{{5+3}}"></h2>  <!--必须有括号，表示里面是表达式，需要解析-->
+			
+			<!--ng-init:初始化数据-->
+			<ul ng-init="cityArr = ['上海','北京','杭州']">
+				<li ng-repeat="city in cityArr">
+					<span>{{city}}---></span>
+					<span> 索引：{{$index}}</span>
+					<span> 是否是第一个：{{$first}}</span>
+					<span> 是否是中间：{{$middle}}</span>
+					<span> 是否是最后一个：{{$last}}</span>
+				</li>
+			</ul>
+			
+			<!--ng-include 加载另一个页面-->
+			<div ng-include="'other.html'"></div>
+			<div ng-include  src="'other.html'"></div>
+			
+			
+
+			
+	    </div>
+	    <div class="row2" ng-controller="row2">
+	   <!--事件指令：-->
+			<button ng-click="changeStatus($event)">切换状态</button>	 
+			<p>{{status}}</p>
+			<p ng-class="{cur:status}">这里可以控制颜色切换</p>
+	    </div>
+	    
+	    
+	    <div class="row3" ng-controller="row3">
+	   <!--节点指令： ng-style     ng-class-->
+			<h3 ng-style="defaultStyle">好好学习</h3>
+			<button ng-click="changeStatus($event)">文字切换</button>	 
+			<h2 ng-class="{cur:status}">大家好</h2>
+			
+			<ul ng-init="cityArr = ['上海','北京','杭州']">
+				<li ng-repeat="city in cityArr" ng-class-even="'even'" ng-class-odd="'odd'">
+					<span>{{city}}---></span>
+					<span> 索引：{{$index}}</span>
+					<span> 是否是第一个：{{$first}}</span>
+					<span> 是否是中间：{{$middle}}</span>
+					<span> 是否是最后一个：{{$last}}</span>
+				</li>
+			</ul>
+			
+			<h4 ng-show="status">点击文字切换按钮，看看我还在吗</h4>
+			<p ng-hide="status">我在这里</p>
+			
+			<ul ng-switch on="status">
+				<li ng-switch-when="true">显示</li>
+			</ul>
+			
+			<a ng-href="{{src}}"><img ng-src="{{src}}" alt="" /></a>
+			<div ng-if="status">条件为真，显示</div>
+	    </div>
+	    
+	    
+	    
+	    
+	  
+	  <script src="../js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	  <script src="js/productController.js" type="text/javascript" charset="utf-8"></script>
+	  
+	</body>
+</html>

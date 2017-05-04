@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$apply方法</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+<!-- 
+
+》》MVC框架：模型(model)－视图(view)－控制器(controller)
+
+	1>.Model（模型）表示应用程序核心（比如数据库记录列表）。
+	2>.View（视图）显示数据（数据库记录）====================HTML。
+	3>.Controller（控制器）处理输入（写入数据库记录）=========JS。
+
+》》知识点：
+	1.多个控制器之间的作用域跟js的function的作用域类似。
+	2.每个ng-controller绑定一个作用域，内部可以访问外部的，但是外部不能访问内部的表达式。
+
+
+
+ -->
+
+</head>
+<body ng-app>  <!-- 规定angular所管理的区域，写在body上标明要管理整个页面 -->
+	
+<div class="boxOut" ng-controller="firstController">
+	当前时间：{{date}}
+
+	<hr>
+	<input type="text" ng-model="name">
+	次数：{{count}}
+	{{name}}
+	<hr>
+		
+</div>
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
